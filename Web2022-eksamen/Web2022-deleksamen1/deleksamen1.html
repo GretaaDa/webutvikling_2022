@@ -1,0 +1,80 @@
+<!-- total 21, 16 errors and 5 warnings-->
+<!-- 1.(ERROR) the document type was not declared. For the browser to understand what type of documet it will be reading,
+  we use <!DOCTYPE html> (html is the type we use in this project)-->
+<!DOCTYPE html>
+<html lang="zxx">
+  <!-- 1. (Warning) language of the document has not been set. Inside the <html> tag we declare the language of the web page,
+     zxx used when language is unknown (line 5)-->
+  <head>
+    <!-- 2. (ERROR) head should not stand in the body. Head is used to store information that describes the document (metadata),
+      while the body holds the actual contents of the html document. For the file to work we need to follow the global structure
+    of html documents, where the head tag comes first and body tag comes second-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- 3. (ERROR) Missing a quatation mark, to link the style.css file we need to put it in a string with two quatation marks-->
+    <title>Web eksamen del 1</title>
+  </head>
+  <body>
+    <nav>
+      <h2>Logo</h2>
+      <!-- 5. (Warning) element h1 is used as top level heading, in articles we use lower number headings ex h2-->
+      <!-- 4. (ERROR) ul is missing. li is used to define an item in a list, for it to worl it must go together with a parent element. 
+      In this case the best parent element that fits with li is ul-->
+      <ul>
+        <li><a href="#">Boatswain schooner</a></li>
+        <li><a href="#">Account lookout</a></li>
+        <li><a href="#">Sail ho shrouds</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Yar Pirate Ipsum</h1>
+      <p>
+        Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast
+        yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog
+        yardarm hempen halter furl.
+      </p>
+      <a class="button">Les mer</a>
+    </header>
+    <div id="main">
+      <main>
+        <!-- 6. (ERROR) tag main missing. The code in line 37 declares an id with the value of "main", 
+        the system can not recognise this element, since the tag is missing. Tag "main" is used to specify the dominant contant of the document,
+        it should have an opening and closing tag inside the body-->
+        <article>
+          <h2>Prow scuttle</h2>
+          <!-- 2. (Warning) element h1 is used as top level heading, in articles we use lower number headings ex h2-->
+          <p>
+            Deadlights jack lad schooner scallywag dance the hempen jig carouser
+            broadside cable strike colors.
+          </p>
+          <a href="#">Les mer</a>
+        </article>
+        <!-- 5. (ERROR) article is not closed. For the system to recognize where the article content start and end, it need to have an opening and a closing tag.
+        This section was missing a closing tag, which usualy have the structure of </tag>-->
+        <article>
+          <h2>Jack Tar transom</h2>
+          <!-- 3. (Warning) element h1 is used as top level heading, in articles we use lower number headings ex h2-->
+          <p>
+            Deadlights jack lad schooner scallywag dance the hempen jig carouser
+            broadside cable strike colors.
+          </p>
+          <a href="#">Les mer</a>
+        </article>
+        <article>
+          <h2>Trysail Sail</h2>
+          <!-- 4. (Warning) element h1 is used as top level heading, in articles we use lower number headings ex h2-->
+          <p>
+            Deadlights jack lad schooner scallywag dance the hempen jig carouser
+            broadside cable strike colors.
+          </p>
+          <a href="#">Les mer</a>
+        </article>
+      </main>
+    </div>
+    <footer>
+      <span>Twitter</span>
+      <span>Facebook</span>
+      <span>Instagram</span>
+    </footer>
+  </body>
+</html>
