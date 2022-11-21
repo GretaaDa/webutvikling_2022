@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Rubik:ital,wght@0,400;1,300&display=swap");
+
+/*When getting stuck on how the decloration should sound like, would look through the task CSS grid (done in class) or webtricksLMS*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Rubik', sans-serif;*/
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #e9f0f1;
+}
+
+/*Used Webtricks LMS for guidence how to work thw grid url: https://lms.webtricks.blog/kurs/webutvikling/css-grid/grid-container*/
+#grid-index-template {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "section section section"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  background-color: #dad7cd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  justify-content: space-between;
+  padding: 0rem 7rem;
+  font-size: large;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/*https://stackoverflow.com/questions/29075200/how-can-i-display-a-paragraph-over-image needed help to figure out how to structer the text over image*/
+.cover {
+  grid-area: section;
+  width: 100%;
+  background-image: url(../Images/christian-wiediger-WkfDrhxDMC8-unsplash.jpg);
+  background-size: cover;
+  background-position: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rem 15rem;
+}
+
+#text-over-pic {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 19px;
+}
+
+.contact-button {
+  display: flex;
+  background-color: rgb(29, 53, 87, 0.85);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 25%;
+  float: right;
+}
+
+#card_main {
+  grid-area: main;
+  gap: 5rem;
+  font-size: larger;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translate(0px, -150px);
+}
+
+#card_main article {
+  border-radius: 10%;
+  padding: 2rem;
+}
+
+#card_main article a {
+  color: black;
+  font-weight: bold;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients "overlaying gradients", needed help with the structure of the code for gradients. Images were used from the folder "bildebank"*/
+.card-1 {
+  background: linear-gradient(
+      345deg,
+      rgb(241, 250, 238, 0.3),
+      rgb(241, 250, 238)
+    ),
+    url("../Images/ben-kolde-bs2Ba7t69mM-unsplash.jpg");
+  flex-basis: 20rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-2 {
+  background: linear-gradient(
+      345deg,
+      rgb(241, 250, 238, 0.1),
+      rgb(241, 250, 238)
+    ),
+    url("../Images/daniel-ali-ju1yFZkrxVg-unsplash.jpg");
+  flex-basis: 20rem;
+  background-size: cover;
+}
+
+.card-3 {
+  background: linear-gradient(
+      345deg,
+      rgb(241, 250, 238, 0.2),
+      rgb(241, 250, 238)
+    ),
+    url("../Images/ux-indonesia-qC2n6RQU4Vw-unsplash.jpg");
+  flex-basis: 20rem;
+  background-size: cover;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #2f3e46;
+  color: #fff;
+}
+
+/*******************
+CONTENT
+*******************/
+
+#grid-content-template {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+#content_main {
+  grid-area: main;
+  padding: 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+aside {
+  grid-area: aside;
+}
+
+img {
+  width: 40vw;
+  padding: 9vw 4vw;
+}
+
+#grid-table4x4-template {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+}
+
+#top1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#top2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#top3 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#left1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#left2 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#left3 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#advan1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+#advan2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+#advan3 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#disad1 {
+  grid-column: 3;
+  grid-row: 2;
+}
+#disad2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+#disad3 {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#diff1 {
+  grid-column: 4;
+  grid-row: 2;
+}
+#diff2 {
+  grid-column: 4;
+  grid-row: 3;
+}
+#diff3 {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.sources {
+  font-size: small;
+}
+
+#grid-UD-table {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(8, auto);
+  gap: 1rem;
+}
+
+#Exp {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#Exam {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#UD1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#UD2 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#UD3 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#UD4 {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+#UD5 {
+  grid-column: 1;
+  grid-row: 6;
+}
+
+#UD6 {
+  grid-column: 1;
+  grid-row: 7;
+}
+
+#UD7 {
+  grid-column: 1;
+  grid-row: 8;
+}
+
+#Exp1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#Exp2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#Exp3 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#Exp4 {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+#Exp5 {
+  grid-column: 2;
+  grid-row: 6;
+}
+
+#Exp6 {
+  grid-column: 2;
+  grid-row: 7;
+}
+
+#Exp7 {
+  grid-column: 2;
+  grid-row: 8;
+}
+
+#Exam1 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#Exam2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#Exam3 {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#Exam4 {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+#Exam5 {
+  grid-column: 3;
+  grid-row: 6;
+}
+
+#Exam6 {
+  grid-column: 3;
+  grid-row: 7;
+}
+
+#Exam7 {
+  grid-column: 3;
+  grid-row: 8;
+}
+
+#grid-SEO-table {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(7, auto);
+  gap: 1rem;
+}
+
+#imp {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#SEO1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+#SEO2 {
+  grid-column: 1;
+  grid-row: 3;
+}
+#SEO3 {
+  grid-column: 1;
+  grid-row: 4;
+}
+#SEO4 {
+  grid-column: 1;
+  grid-row: 5;
+}
+#SEO5 {
+  grid-column: 1;
+  grid-row: 6;
+}
+#SEO6 {
+  grid-column: 1;
+  grid-row: 7;
+}
+
+#Imp1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+#Imp2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+#Imp3 {
+  grid-column: 2;
+  grid-row: 4;
+}
+#Imp4 {
+  grid-column: 2;
+  grid-row: 5;
+}
+#Imp5 {
+  grid-column: 2;
+  grid-row: 6;
+}
+#Imp6 {
+  grid-column: 2;
+  grid-row: 7;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 960px) {
+  #grid-content-template {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+    font-size: 13px;
+  }
+  #grid-table4x4-template {
+    gap: 0.25rem;
+  }
+
+  #grid-table4x4-template h2 {
+    font-size: 1em;
+  }
+
+  #grid-UD-table {
+    gap: 0.25rem;
+  }
+
+  #grid-UD-table h3 {
+    font-size: 1em;
+  }
+
+  #grid-SEO-table {
+    gap: 0.25rem;
+  }
+
+  #grid-SEO-table h3 {
+    font-size: 1em;
+  }
+}
